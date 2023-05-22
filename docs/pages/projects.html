@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<!--https://www.w3schools.com/howto/howto_css_parallax.asp-->
+<!-- 
+We need to include the following:
+	Face recognition applet
+	GitHub links
+ -->
+<html lang="en">
+<head>
+  <link rel="icon" href="assets/ai.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexander Kim e-Portfolio</title>
+  <!--<link rel="stylesheet" href="assets/style.css">-->
+<style>
+<!--body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}-->
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  background-color: #3b5972;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+<!-- ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+} -->
+li {
+    margin-left: 30px;
+    list-style-type: circle;
+ }
+
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+.bgimg-1, .bgimg-2, .bgimg-21, .bgimg-22, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("assets/ai.jpg");
+  min-height: 150%;
+}
+
+.bgimg-2 {
+  background-image: url("assets/blockchain.png");
+  min-height: 150%;
+}
+
+.bgimg-21 {
+  background-image: url("assets/crypto.png");
+  min-height: 70%;
+}
+.bgimg-22 {
+  background-image: url("assets/highway.gif");
+  min-height: 70%;  
+}
+
+.bgimg-3 {
+  background-image: url("assets/gui.jpg");
+  min-height: 150%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 1px
+}
+.img-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #111;
+  background-color: #fff;
+  padding: 18px;
+  font-size:20px;
+  text-align:center;
+}
+.scrollFade {
+  opacity: 1;
+  pointer-events: all;
+}
+.scrollFade--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.scrollFade--visible {
+  opacity: 1;
+  pointer-events: all;
+}
+.scrollFade--animate {
+  transition: opacity 0.75s ease-in-out;
+}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Alexander Kim e-Portfolio</h1>
+    <nav>
+      <a href="../home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </header>
+  
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;">
+  <h3 style="text-align:center;font-size:24px">Summary</h3>
+  <p style="text-align:justify;font-size:20px;">I have included links to the most important information on this page. Click the orange links to jump directly to that section.</p>
+  <ul style="text-align:justify;font-size:19px">
+	<li><a href="#dhmc" style="color:orange">Best project</a> - Dense Hamiltonian Monte Carlo (DHMC). This project required the most research on my part and pushed me far out of my comfort zone.</li>
+	<li><a href="#fashion" style="color:orange">Growth</a> - Fashion classification. This project was my first AI project. I have went from using cookie cutter datasets to designing my own algorithms.</li>
+	<li><a href="#yahtzee" style="color:orange">Communication & teamwork</a> - Yahtzee. This project was a multifile project that I did with a partner. We had to continuously communicate with each other so that we split work appropriately and didn't overwrite each other's code.</li>
+	<li><a href="#blockchain" style="color:orange">Critical thinking</a> - Blockchain. This project required critical thinking because I had to learn unfamiliar concepts and then apply them in a way so that I could implement the idea using code that I knew.</li>
+  </ul>
+  </div>
+</div>
+  
+ <div class="bgimg-1">
+  <div class="caption">
+  <span class="border"><b>AI</b> is Here</span>
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;">
+  <h3 style="text-align:center;font-size:24px">A Disruptive Technology</h3>
+  <p style="text-align:justify;font-size:20px;">The long-awaited artificial intelligence (AI) revolution has finally caught up to the lives of everyday people. Years ago, AI could only be accessed by graduate level researchers and international corporations. With the help of increasingly more powerful computers and community-led initiatives to decentralize AI knowledge, anyone with a modern laptop can access dynamic AI models. The change has shocked almost all industries. Now, people can use AI to write their papers, draw their drawings, and research their projects. This technology disrupting the global economy, and it is up to its users to determine where it will take the world.</p>
+  <p style="text-align:center;font-size:20px;"><br><br><i>Since 2018, I have worked with AI programming. Here are my main AI projects.</i></p>
+  <br>
+  <p style="text-align:justify;font-size:20px;">Definitions:</p>
+  <ul style="text-align:justify;font-size:19px">
+	<li>Model - A general term referring to AI. A mathematical function that outputs a prediction for inputs.</li>
+	<li>Training - The process of making a model better.</li>
+  </ul>
+  
+  <br>
+  <h3 style="text-align:center;font-size:24px;line-height:1px"><a id="fashion">Hello World</a></h3>
+  <p style="text-align:center;font-size:22px"><u>Fashion classification</u></p>
+  <p style="text-align:justify;font-size:20px;">This was my first project and most people generally begin their AI journey with this project. At the time, I did not understand much of the specifics. I mainly copied and pasted the code and ran it to see if it worked.</p>
+  <img src="assets/fashionmnist.png" style="width:50%;height:50%;">
+  <p style="text-align:justify;font-size:20px;">The AI model is fed a massive dataset of images. Each image is one of ten different fashion items. The model's job is to classify a given image into its correct category.</p>
+  <img src="assets/fashionresults.png" style="width:50%;height:50%;">
+  <p style="text-align:center;font-size:16px;"><i>Sample predictions made by the model.</i></p>  
+  <br>
+  <p style="text-align:justify;font-size:20px;">With a few rounds of training, the model performed at around 90% accuracy. The model still misclassified some items. However, generally these items were similar in shape (e.g. Sandal/Sneaker and Pullover/Coat).</p>
+  
+  <br>
+  <h3 style="text-align:center;font-size:24px;line-height:1px">Advanced Image Processing</h3>
+  <!-- <p style="text-align:center;font-size:22px"><u>Face recognition</u></p>
+  <p style="text-align:justify;font-size:20px;">This project aimed to create a face recognition program. This project was a turning point in my studies. From this point onwards, my projects would be limited by my hardware available. This means I must resort to using smaller datasets and smaller models so that training can finish within a reasonable timeframe (<6 hours). Unfortuntely, this also decreases performance.</p>
+  <img src="assets/faceembedding.png" style="width:60%;height:60%;">
+  <p style="text-align:center;font-size:16px;"><i>Each face is matched with a set of numbers, called a face embedding.</i></p>  
+  <br>-->
+  <p style="text-align:center;font-size:22px"><u>Artificial face generation</u></p>
+  <p style="text-align:justify;font-size:20px;">This project aimed to create a face generation program. While the theory was difficult to grasp, the actual coding turned out to be rather simple.</p>
+  <img src="assets/dcgangendis.png" style="width:50%;height:50%;">
+  <p style="text-align:justify;font-size:20px;">Two AI models compete with each other. Essentially, we are interested in making sure that the generator (which makes fake images) fools the discriminator (which classifies images as real or fake).</p>  
+  <br>
+  <table style="width:60%;margin-left:auto;margin-right:auto;font-size:20px;border:1px solid black">
+	<tr>
+		<th></th>
+		<th>Homemade</th>
+		<th>Industrial grade (DCGAN)</th>
+	</tr>
+	<tr>
+		<th>Training time</th>
+		<td>10 minutes</td>
+		<td>40 hours</td>
+	</tr>
+	<tr>
+		<th>Dataset size</th>
+		<td>8,500 images</td>
+		<td>350,000 images</td>
+	</tr>
+  </table>
+  <br>
+  <img src="assets/dcganepoch.png" style="width:90%;height:90%;">
+  <p style="text-align:center;font-size:16px;"><i>The performance of the model through training. <b>Left.</b> After 10 training iterations. <b>Right.</b> After 100 training iterations.</i></p>  
+  <br>
+  <br>
+  <img src="assets/dcgansample.png" style="width:30%;height:30%;">
+  <p style="text-align:center;font-size:16px;"><i>Sample images generated by the fully trained model.</i></p>  
+  <br>
+  <br>
+  <img src="assets/dcganwalk1.png" style="width:90%;height:90%;">
+  <p style="text-align:center;font-size:16px;"><i><b>Left.</b> Smiling female. <b>Right.</b> Neutral male.</i></p>  
+  <img src="assets/dcganwalk2.png" style="width:90%;height:90%;">
+  <p style="text-align:center;font-size:16px;"><i><b>Left.</b> Facing right. <b>Right.</b> Facing left.<br>The model can even combine two generated images.</i></p>  
+
+  <br>
+  <h3 style="text-align:center;font-size:24px;line-height:1px">Natural Language Processing</h3>
+  <p style="text-align:center;font-size:22px"><u>Shakespeare generation</u></p>
+  
+  <p style="text-align:justify;font-size:20px;">I did not work much with text over my AI studies mainly due to hardware limitations. Since there are so many words in the English language, the datasets quickly become too large for the average computer. This was one of my few text-based projects and it aimed to create a Shakespeare-themed text generator.</p>
+  <img src="assets/wordembedding.png" style="width:50%;height:50%;">
+  <p style="text-align:center;font-size:16px;"><i>Each word is assigned a set of numbers. Generally, homemade models will use characters (26 letters) rather than words (40,000 common words) albeit with subpar performance.</i></p>  
+  <br>
+  <table style="width:60%;margin-left:auto;margin-right:auto;font-size:20px;border:1px solid black">
+	<tr>
+		<th></th>
+		<th>Homemade</th>
+		<th>Industrial grade (ChatGPT)</th>
+	</tr>
+	<tr>
+		<th>Training time (adjusted)</th>
+		<td>2.5 minutes</td>
+		<td>500,000 hours</td>
+	</tr>
+	<tr>
+		<th>Dataset size</th>
+		<td>1 MB</td>
+		<td>570 GB</td>
+	</tr>
+	<!--<tr>
+		<th>Model size</th>
+		<td>7M parameters</td>
+		<td>65B parameters</td>
+	</tr>-->
+  </table>
+  <br>
+  <br>
+  <img src="assets/response.png" style="width:40%;height:40%;">
+  <p style="text-align:center;font-size:16px;"><i>AI response to "JAMES:\nCome hither and see wha"</i></p>  
+  
+  <br>
+  <h3 style="text-align:center;font-size:24px;line-height:1px">Time Series Forecasting</h3>
+  <p style="text-align:center;font-size:22px"><u>Temperature prediction</u></p>
+  
+  <p style="text-align:justify;font-size:20px;">Time series forecasting is predicting what will happen in the future using past data. One example is analyzing temperature fluctuations.</p>
+  <br>
+  <table style="width:60%;margin-left:auto;margin-right:auto;font-size:20px;border:1px solid black">
+	<tr>
+		<th></th>
+		<th>Homemade</th>
+		<th>Industrial grade (TFT)</th>
+	</tr>
+	<tr>
+		<th>Training time </th>
+		<td><1 minute</td>
+		<td>6 hours</td>
+	</tr>
+	<tr>
+		<th>Dataset size</th>
+		<td>3,000 items</td>
+		<td>500,000 items</td>
+	</tr>
+  </table>
+  <br>
+  <br>
+  <img src="assets/tempstrain.png" style="width:30%;height:30%;"><br>
+  <img src="assets/tempstest.png" style="width:30%;height:30%;">
+  <p style="text-align:center;font-size:16px;"><i>Daily temperature (&deg;C) in Melbourne, Australia.<b>Top.</b> Training data. <b>Bottom.</b> Testing data that model does not see.</i></p>  
+  <br>
+  <img src="assets/tempspredict.png" style="width:30%;height:30%;">
+  <p style="text-align:center;font-size:16px;"><i><b>Orange.</b> Model predictions. <b>Blue.</b> Actual values.</i></p> 
+
+  <br>
+  <h3 style="text-align:center;font-size:24px;line-height:1px"><a id="dhmc">Advanced Statistical Analysis</a></h3>
+  <p style="text-align:center;font-size:22px"><u>Dense Hamiltonian Monte Carlo (DHMC)</u></p>
+  <p style="text-align:justify;font-size:20px;">My most complex project to date. This project attempted to automate a statistical algorithm called Hamiltonian Monte Carlo (HMC). </p>
+  <br>
+  <video autoplay loop muted playsinline src="assets/hmc.mp4" style="width:50%;height:50%;"></video>
+  <p style="text-align:center;font-size:16px;"><i>HMC applies the laws of physics to sample from a complicated probability distribution.</i></p>  
+  <p style="text-align:justify;font-size:20px;"><br>My suggested method DHMC leverages the power of neural networks to boost this process. The novel algorithm was tested on two probability distributions compared to an existing autotuning method called the No-U-Turn Sampler (NUTS).</p>
+  <br>
+  <img src="assets/std.png" style="width:40%;height:40%;">
+  <p style="text-align:center;font-size:16px;"><i>Standard normal distribution for baseline testing.</i></p>  
+  <br>
+  <img src="assets/stdcomparison.png" style="width:50%;height:50%;">
+  <p style="text-align:center;font-size:16px;"><i>DHMC and NUTS sample quality shown by a QQ plot.</i></p>  
+  <p style="text-align:justify;font-size:20px;"><br>DHMC shows similar performance to NUTS while DHMC executes around three times faster than NUTS. How about for a more complicated distribution?</p>
+  <br>
+  <img src="assets/rosen.png" style="width:40%;height:40%;">
+  <p style="text-align:center;font-size:16px;"><i>2D Rosenbrock distribution for deeper testing.</i></p>  
+  <br>
+  <img src="assets/rosencomparison.png" style="width:60%;height:60%;">
+  <p style="text-align:center;font-size:16px;"><i>DHMC and NUTS sample quality.</i></p>  
+  <p style="text-align:justify;font-size:20px;"><br>DHMC converges to the high-density areas of the distribution quickly. NUTS tends to explore more of the distribution but ends up missing the important parts of the distribution. Not only, DHMC performs six-seven times faster than NUTS for the Rosenbrock distribution. In all, DHMC provides superior samples with less execution time.</p>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+  <span class="border" style="font-size:25px;color: #f7f7f7;"><b>Blockchain</b> is Not Dead</span>
+  </div>
+</div>
+  
+<div class="bgimg-21">
+  <div class="img-text item scrollFade">Many people automatically think of <a target="_blank" rel="noopener noreferrer" href="https://bitcoin.org/bitcoin.pdf" style="color:orange">Bitcoin</a> when they hear of blockchain.</div>
+</div>
+<div class="bgimg-22">
+  <div class="img-text item scrollFade">But blockchain is <i>so</i> much more than cryptocurrency.<br></div>
+</div>
+<div class="bgimg-22">
+  <div class="img-text item scrollFade">Decentralization and flattening is happening in all industries.<br>Blockchain offers just that: <i>trust</i> without a centralized authority.</div>
+</div>
+<div class="bgimg-22">
+  <div class="img-text item scrollFade">No more middleman.<br>Transactions, supply chains, contracts, storage are <i>fast</i> and <i>secure</i>!</div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;">
+  <h3 style="text-align:center;font-size:24px;line-height:1px"><a id="blockchain">Local Blockchain Simulation</a></h3>
+  <p style="text-align:justify;font-size:20px;">Definitions:</p>
+  <ul style="text-align:justify;font-size:19px">
+	<li>Blockchain - A series of "blocks." Blocks are connected in a way so that they cannot be changed.</li>
+	<li>Block - A chunk of information.</li>
+	<li>Peer-to-peer (P2P) network - The set of connected nodes.</li>
+	<li>Node - A computer.</li>
+  </ul>
+  <br>
+  <img src="assets/p2p.png" style="width:40%;height:40%;">
+  <p style="text-align:center;font-size:16px;"><i>Each computer stores its own copy of the blockchain, making the network decentralized.</i></p>  
+  <br>
+  <p style="text-align:justify;font-size:20px;">I have attempted to implement my own blockchain using Java. I based it off of the Ethereum protocol. Ethereum's algorithm requires nodes to run a program called an Ethereum client. This program makes sure that the network is following the rules.</p>
+  <br>
+  <img src="assets/useroptions.png" style="width:75%;height:75%;">
+  <p style="text-align:center;font-size:16px;"><i>Each node can interact with each other through user input.</i></p> 
+  <br>
+  <img src="assets/client.png" style="width:75%;height:75%;">
+  <p style="text-align:center;font-size:16px;"><i>The client program handles node requests and moderates network activity.</i></p> 
+  <br>
+  <img src="assets/block1.png" style="width:75%;height:75%;">
+  <br><br>
+  <img src="assets/block2.png" style="width:75%;height:75%;">
+  <p style="text-align:center;font-size:16px;"><i>After a set number of transactions, a new block is created and broadcast to each node. <b>Top.</b> First block. <b>Bottom.</b> Second block.</i></p>   
+  <br>
+  <p style="text-align:justify;font-size:20px;">On a public blockchain, there would be several independent versions of the client program and much more security measures.</p>
+</div>
+
+ <div class="bgimg-3">
+  <div class="caption">
+  <span class="border"><b>Graphical User Interface (GUI)</b></span>
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;">
+  <h3 style="text-align:center;font-size:24px;line-height:1px"><a id="yahtzee">A New Paradigm</a></h3>
+  <p style="text-align:justify;font-size:20px;">GUIs are what connect code to users. Any type of visual interface that the user can interact with can be considered a GUI. Without GUIs, the user would have to interact with text on a screen, using only their keyboard to input directions.</p>
+  <p style="text-align:justify;font-size:20px;">This is a Yahtzee program using a GUI.</p>
+  <br>
+  <img src="assets/yahtzee.png" style="width:85%;height:85%;">
+  <p style="text-align:center;font-size:16px;"><i>The Yahtzee program consists of a dice panel and multiple scorecard panels. The user selects dice to keep.</i></p> 
+  <br>
+  <video autoplay loop muted playsinline src="assets/yahtzeevideo.mp4" style="width:85%;height:85%;"></video>
+  <p style="text-align:center;font-size:16px;"><i>Live gameplay of two player Yahtzee.</i></p> 
+</div>
+
+<footer>
+<p>Alexander Kim e-Portfolio 2023</p>
+</footer>
+
+<script src="assets/scrollfade.js"></script>
+
+</body>
+</html>

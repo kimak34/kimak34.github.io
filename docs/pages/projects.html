@@ -214,11 +214,15 @@ footer {
 <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;">
   <h3 style="text-align:center;font-size:24px"><a id="spt"></a>New Methods and New Applications</h3>
   <p style="text-align:justify;font-size:20px;">Single particle tracking (SPT) is a method to calculate the trajectories of particles in a certain medium over time. Based on these trajectories, various statistical methods can be used to extract properties of these particles, oftentimes revealing the nature of the medium as well as the types of particles shown in the recoridng. Recent advances in microscopy as well as computation has made SPT a more widely used and useful method to study biological particles. In fact, SPT is the main basis of the drug discovery method of Eikon Therapeutics. I have worked with the Regot research lab at Johns Hopkins for the past few months, using SPT to analyze protein translocation within the endoplasmic reticulum, opening doors to understanding ribosomal pathways and cellular mechanisms. While I can't release data from the lab, I will present the main computational method I used, state arrays for single particle tracking (SASPT).</p>
+  <br>
   <img src="assets/sptPALM.jpg" style="width:50%;height:50%;">
   <p style="text-align:center;font-size:16px;"><i>(A) Experimental setup. Trajectory data is a set of short trajectories. (B) Each state is assumed to be distributed according to some state parameters. Bayesian methods are used to determine this original distribution. (C) Effects of particle speed on trajectory length. Slowed particles tend to have more data points than faster particles.</i></p>  
+  <br>
   <p style="text-align:justify;font-size:20px;">Analyzing trajectory data is no easy task. This is especially due to the contribution of two error sources: localization error and defocalization error. Localization error refers to errors in tracking due to microscope deficiencies. Defocalization error refers to the disproportionate weight given to slower particles with more data points. SASPT is a complicated Bayesian method that accounts for these errors and outputs a distribution of diffusion coefficients to help researchers determine properties of the medium as well the particles. At its heart, SASPT iteratively finds the optimal state parameters that maximize a metric called the evidence lower bound (ELBO), which guarantees a "good" approximation of the true posterior distribution.</p>
+  <br>
   <img src="assets/SA tests cropped.jpg" style="width:50%;height:50%;">
   <p style="text-align:center;font-size:16px;"><i>Experimental test results for sample test particles. Each peak corresponds to a single state. Results are consistent with biological literature.</i></p> 
+  <br>
   <object data="assets/SASPT.pdf" type="application/pdf" width="50%" height="500px">
     <p>Unable to display PDF file. <a href="assets/SASPT.pdf">Download</a> instead.</p>
   </object>
